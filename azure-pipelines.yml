@@ -7,12 +7,12 @@ trigger:
 - master
 
 pool:
-  image:default
+  name:Default
 
 steps:
 - script: echo Myfirst Azure Pipeline for maven project
   displayName: 'Run a one-line script'
 - script: mvn clean install
   displayName: 'Build with maven'
-- script: java -jar target/MavenJenkinPipeline-1.0-SNAPSHOT.jar
+- script: java -jar target/MavenJenkinsPipeline-1.0-SNAPSHOT.jar
   displayName: 'Running jar'
